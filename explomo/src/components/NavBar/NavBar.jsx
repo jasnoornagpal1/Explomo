@@ -1,28 +1,28 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 
 const NavBar = (props) => {
     let nav = props.user ?
-      <div>
-        <Link to='/login' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
-        <NavLink to='/entry-form' className='NavBar-link' activeClassName='selected'><strong>+</strong>Explore</NavLink>
+      <div className="container">
+        
+        <Link to='/login' onClick={props.handleLogout}>LOG OUT</Link>
+        
+        <span>WELCOME, {props.user.name}</span>
       </div>
       :
-      <div>
-        <NavLink to='/login' className='NavBar-link' activeClassName="selected">LOG IN</NavLink>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <NavLink to='/signup' className='NavBar-link' activeClassName="selected">SIGN UP</NavLink>
+      <div className="container">
+        <Link to='/login'>LOG IN</Link>
+        
+        <Link to='/signup'>SIGN UP</Link>
       </div>;
-
+  
     return (
-      <div className='navbar fixed-top custom-nav'>
+      <div>
         {nav}
       </div>
     );
-};
-
-export default NavBar;
+  };
+  
+  export default NavBar;
