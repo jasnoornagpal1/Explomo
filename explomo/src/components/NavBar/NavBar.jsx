@@ -7,15 +7,16 @@ const NavBar = (props) => {
     let nav = props.user ?
       <div className="container">
         
-        <Link to='/login' onClick={props.handleLogout}>LOG OUT</Link>
+        <div>LOG OUT</div>
         
-        <span>WELCOME, {props.user.name}</span>
+        <span>WELCOME, </span>
       </div>
       :
       <div className="container">
-        <Link to='/login'>LOG IN</Link>
+        <div>LOG IN</div>
         
-        <Link to='/signup'>SIGN UP</Link>
+        
+        <div>SIGN UP</div>
       </div>;
   
     return (
