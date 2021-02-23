@@ -4,19 +4,21 @@ import './NavBar.css';
 
 
 const NavBar = (props) => {
+    
     let nav = props.user ?
-      <div className="container">
-        
-        <div>LOG OUT</div>
-        
-        <span>WELCOME, </span>
-      </div>
-      :
-      <div className="container">
-        <div>LOG IN</div>
-        
-        <div to='/signup'>SIGN UP</div>
-      </div>;
+    <div>
+      <div to='/high-scores' className='NavBar-link'>HIGH SCORES</div>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <div to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</div>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
+    </div>
+    :
+    <div>
+      <div to='/login' className='NavBar-link'>LOG IN</div>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <div to='/signup' className='NavBar-link'>SIGN UP</div>
+    </div>;
   
     return (
       <div>
