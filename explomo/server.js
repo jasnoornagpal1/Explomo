@@ -7,9 +7,9 @@ require('./config/database');
 
 const app = express();
 
-app.use(logger('dev'));
-app.use(express.json());
+let citiesRoute = require( "./routes/citiesRoute")
 
+app.use(logger('dev'));
 app.use(express.json());
 
 // Configure both serve-favicon & static middlewares
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 
-app.use('/api', require('./routes/api'))
+app.use("/api", citiesRoute);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work
