@@ -15,8 +15,7 @@ const NavBar = (props) => {
       <div className="container">
         <div>LOG IN</div>
         
-        
-        <div>SIGN UP</div>
+        <div to='/signup'>SIGN UP</div>
       </div>;
   
     return (
