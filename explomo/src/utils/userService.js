@@ -1,3 +1,6 @@
+import { token } from "morgan";
+
+import tokenService from './tokenService';
 const BASE_URL = '/api/users/';
 
 function signup(user) {
@@ -9,9 +12,12 @@ function signup(user) {
   .then(res => {
     if (res.ok) return res.json();
     // Probably a duplicate email
-    throw new Error('Email already taken!');
+    throw new Error('Something went wrong!');
   })
-  .then(data => data);
+  // Object parameter destructuring here
+  .then(({  token  }) => {
+    tokenService.setToken(token);
+  });
 }
 
 export default {
