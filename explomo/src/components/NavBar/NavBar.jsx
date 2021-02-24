@@ -9,6 +9,7 @@ const NavBar = () => {
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to="/signup" className='NavBar-link'>SIGN UP</Link>
     </div>
+    
   );
 };
 

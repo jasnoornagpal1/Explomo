@@ -4,13 +4,15 @@ import NavBar from './components/NavBar/NavBar';
 import { Route, Switch } from 'react-router-dom';
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import Map from './components/Map/Map';
+import Category from './components/Category/Category';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      
+     
     };
   }
 
@@ -20,8 +22,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Explomo</header>
-        <NavBar />
+        <header className="App-header">Explomo </header>
+        <NavBar/>
+        
+        <Map /> 
+        
         
         <Switch>
           <Route exact path='/' render={() =>
@@ -41,6 +46,8 @@ class App extends Component {
           }/>
 
         </Switch>
+
+      
 
 
       </div>

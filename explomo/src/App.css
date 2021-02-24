@@ -9,4 +9,14 @@
   color: white;
   font-size: 40px;
   text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
 }
+
+.map {
+  border: 2px solid blue;
+  margin: 20px;
+  padding: 200px;
+}
+
+
