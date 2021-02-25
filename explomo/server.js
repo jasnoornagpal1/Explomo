@@ -7,7 +7,8 @@ require('./config/database');
 
 const app = express();
 
-let citiesRoute = require( "./routes/citiesRoute")
+let citiesRoute = require( "./routes/citiesRoute");
+let bucketlistRoute = require("./routes/bucketlistRoute");
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/users', require('./routes/users'));
 app.use("/api", citiesRoute);
+app.use("/api", bucketlistRoute);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work

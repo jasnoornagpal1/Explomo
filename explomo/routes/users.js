@@ -10,6 +10,8 @@ router.post('/login', usersCtrl.login);
 
 /*---------- Protected Routes ----------*/
 
+router.get('/userProfile', usersCtrl.getUserInfo);
+// router.post('/userProfile', userCtrl.create);
 
 
 

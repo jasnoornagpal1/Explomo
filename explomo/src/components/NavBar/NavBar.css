@@ -8,8 +8,14 @@
 
 .NavBar-welcome {
     color: grey;
+    text-transform: uppercase;
+
   }
 
 .NavBar-link{
     text-align: right;
 }
+
+   
+
+
