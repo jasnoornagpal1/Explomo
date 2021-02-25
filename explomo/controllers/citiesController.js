@@ -13,8 +13,8 @@ async function findAllCities(req,res){
 async function createTestCities(req,res) {
     try {
       await CityModel.create({
-          name: "toronto",
-          location:'On',
+          name: "Toronto",
+          location:'ON',
           image:'b'
 
       })

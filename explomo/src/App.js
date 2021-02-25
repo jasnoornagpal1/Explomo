@@ -5,14 +5,18 @@ import { Route, Switch } from 'react-router-dom';
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import userService from './utils/userService';
+import citiesAPI from './utils/allCitiesService'
 import Cities from './components/Cities/Cities';
 import Map from './components/Map/Map';
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      cities: []
+      
     };
   }
 
@@ -26,6 +30,13 @@ class App extends Component {
     this.setState({ user: userService.getUser() });
   }
 
+  /*--- Lifecycle Methods ---*/ 
+
+  async componentDidMount() {
+    const citiesList = await citiesAPI.getAllCities();
+    this.setState( citiesList )
+  }
+  
   render() {
     return (
       <div className="App">
@@ -33,14 +44,20 @@ class App extends Component {
           handleLogout = {this.handleLogout}
           user={this.state.user}
           
-        />
-</header>
+          />
+        </header>
+
         {/* anything that is on everypage goes outside switch*/}
        
         <Switch>
           <Route exact path='/' render={() =>
-            <div><h1> <Map /> <Cities /></h1></div>
+            <div><h1> <Map /> 
+            <Cities 
+            cities = {this.state.cities}
+            
+            /></h1></div>
           }/>
+
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
             history={history}
