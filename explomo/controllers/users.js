@@ -32,6 +32,16 @@ async function login(req, res) {
     }
   }
   
+  async function getUserInfo(req,res){
+    try{
+      res.json(req.user)
+        // let userProfile = await User.find({});
+        // console.log()
+        // res.send({cities: allCities})
+    } catch (err){
+        res.send({message: err.message, response: false})
+    }
+}
 
 /*----- Helper Functions -----*/
 
@@ -46,4 +56,5 @@ function createJWT(user) {
 module.exports = {
     signup,
     login,
+    getUserInfo
 }

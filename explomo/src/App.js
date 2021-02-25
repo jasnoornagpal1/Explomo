@@ -32,6 +32,7 @@ class App extends Component {
         {/* anything that is on everypage goes outside switch*/}
         <NavBar 
           handleLogout = {this.handleLogout}
+          user={this.state.user}
           
         />
 
