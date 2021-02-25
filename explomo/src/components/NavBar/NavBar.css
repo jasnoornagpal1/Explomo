@@ -5,3 +5,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.NavBar-welcome {
+    color: grey;
+  }
+
+.NavBar-link{
+    text-align: right;
+}
