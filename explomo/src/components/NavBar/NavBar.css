@@ -16,6 +16,8 @@
 .NavBar-link{
     display: flex-end;
     text-align: right;
-    font-size: 25px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
 }
 

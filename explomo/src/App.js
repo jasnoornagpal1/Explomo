@@ -54,7 +54,6 @@ class App extends Component {
             <div><h1> <Map /> 
             <Cities 
             cities = {this.state.cities}
-            
             /></h1></div>
           }/>
 
@@ -74,7 +73,7 @@ class App extends Component {
           }/>
           <Route exact path='/recommendations' render={({ history }) => 
             <div>
-            <div>hello{this.props.location.city.name}</div>
+            <div>Welcome to {this.props.location.city.name}</div>
             <div>
             { this.props.location.city.restaurants.map(function(r){
               return (
