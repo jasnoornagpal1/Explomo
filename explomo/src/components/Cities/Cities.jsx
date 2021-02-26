@@ -1,4 +1,6 @@
 import React from 'react';
+import './Cities';
+import { Link } from 'react-router-dom';
 
 class Cities extends React.Component {
   constructor() {
@@ -13,15 +15,23 @@ class Cities extends React.Component {
   }
 
   render () {
-    let cityUI = this.props.cities.map(function(city){
+    let newRec = {
+      pathname: "/recommendations"
+    }
+    let displayCities = this.props.cities.map(function(city){
       return (
-        <h6>{city.name}</h6>
+        <div className = "citiesCard">
+          <p>{city.name}</p>
+          <p>{city.location}</p>
+          <img src={city.image}/>
+          <Link to={{pathname: "/recommendations", city: city}}>Recommendations!</Link>
+        </div>
       )
     }) 
     return (
       <div className='cities'>
-      {cityUI}
-    </div>
+      {displayCities}
+      </div>
     )
   }
 }

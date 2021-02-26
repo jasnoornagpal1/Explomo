@@ -72,6 +72,23 @@ class App extends Component {
             handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
+          <Route exact path='/recommendations' render={({ history }) => 
+            <div>
+            <div>hello{this.props.location.city.name}</div>
+            <div>
+            { this.props.location.city.restaurants.map(function(r){
+              return (
+                <div className = "citiesCard">
+                  <p>{r.name}</p>
+                </div>
+              
+              )
+            }) 
+          }
+          </div>
+          </div>
+          }/>
+          
 
         </Switch>
 
