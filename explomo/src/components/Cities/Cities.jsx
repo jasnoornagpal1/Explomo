@@ -23,8 +23,10 @@ class Cities extends React.Component {
         <div className = "citiesCard">
           <p>{city.name}</p>
           <p>{city.location}</p>
-          <img src={city.image}/>
-          <Link to={{pathname: "/recommendations", city: city}}>Recommendations!</Link>
+            <div className = "citiesImg">
+              <img src={city.image}/>
+              <Link to={{pathname: "/recommendations", city: city}}>Recommendations!</Link>
+            </div>
         </div>
       )
     }) 
