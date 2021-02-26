@@ -23,12 +23,14 @@ Find ComplimentMyClothes here: COMING SOON
 
 #### 2. User can look for and selects the city they want to visit next:
 <img src="https://i.imgur.com/TLWfMpI.png">
+---
 <img src="https://i.imgur.com/uBcjHHU.png">
 
 ---
 
 #### 3. Once they pick a city for their next trip, the recommendations will lead to a page with a list of activities for their trip: 
 <img src="https://i.imgur.com/haiX9Vo.png">
+---
 <img src="https://i.imgur.com/p4ppTmp.png">
 
 ---
