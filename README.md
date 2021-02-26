@@ -29,10 +29,7 @@ Find ComplimentMyClothes here: COMING SOON
 
 #### 3. Once they pick a city for their next trip, the recommendations will lead to a page with a list of activities for their trip: 
 <img src="https://i.imgur.com/haiX9Vo.png">
-
-#### 4. User can also be provided with items approriate for the current temperature:
-<img src="https://i.imgur.com/hQjNINH.png">
-<img src="https://i.imgur.com/Rr26FCl.png">
+<img src="https://i.imgur.com/p4ppTmp.png">
 
 ---
 
