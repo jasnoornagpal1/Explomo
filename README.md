@@ -9,7 +9,7 @@ The app designed to organize your travel plans from start to finish. Simply pick
 
 No more scrambling to create your travel plan. Explomo does the hard work for you.
 
-Find ComplimentMyClothes here: COMING SOON
+Find Explomo here: COMING SOON
 
 ---
 #### **Functionalities of the Application:**
